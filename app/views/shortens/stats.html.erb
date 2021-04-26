@@ -1,0 +1,15 @@
+<div style="text-align: center;padding-top: 30px;">
+	<h1>Analytics</h1>
+	<% @links.each do |link| %>
+	  <div style="border-bottom: 1px solid grey;">
+	  <h2>
+	  	<%= link.url %>
+	  </h2>
+	  <div style="padding-top: 10px;">
+	  	<%= link.short %>
+	  </div>
+	  <div style="padding: 10px;">
+	  	Total clicks: <%= link.use_count %>
+	  </div></div>
+	<% end %>
+</div>

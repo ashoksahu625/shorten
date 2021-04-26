@@ -1,0 +1,23 @@
+<div style="text-align: center;padding-top: 50px;">
+	<h1>Welcome to shot.com</h1>
+
+	<%= form_with model: @shorten, :remote => true do |form| %>
+	  <div style="padding-bottom: 20px;">
+	  	<label>Please enter your URL here</label>
+	  </div>
+	  <div>
+	    
+	    <%= form.text_field :url %>
+	    <%= form.submit "SHORTEN" %>
+	  </div>
+	<% end %>
+
+	<div id="url_container" style="display: none;">
+		<div style="padding-top: 20px;">
+	  	<label>Here's your shot URl! </label>
+	  </div>
+	  <div>
+	  	<h2 id="short_url"></h2>
+	  </div>
+	</div>
+</div>
